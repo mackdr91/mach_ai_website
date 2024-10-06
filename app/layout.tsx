@@ -12,6 +12,16 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const simplyRounded = localFont({
+  src: "./fonts/simplyrounded.ttf",
+  variable: "--font-simply-rounded",
+  style: "normal",
+})
+const proline = localFont({
+  src: "./fonts/Proelium.otf",
+  variable: "--font-proline",
+  style: "normal",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${proline.variable} ${geistMono.variable} ${geistSans.variable} ${simplyRounded.variable} bg-black text-white`}
       >
         {children}
+        
       </body>
     </html>
   );

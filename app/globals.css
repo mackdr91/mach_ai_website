@@ -3,25 +3,68 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-simply-rounded: "Simply Rounded", sans-serif;
+  --font-proline: "Proline", sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-proline); /* Default font */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+
+.font-simply-rounded {
+  font-family: var(--font-simply-rounded);
+}
+
+p {
+  font-family: var(--font-geist-sans);
+}
+
+
+li {
+  font-family: var(--font-geist-sans);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 191, 0, 0.7), 0 0 20px rgba(255, 87, 51, 0.7), 0 0 30px rgba(255, 87, 51, 0.7), 0 0 40px rgba(255, 87, 51, 0.7);
   }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 191, 0, 1), 0 0 30px rgba(255, 87, 51, 1), 0 0 40px rgba(255, 87, 51, 1), 0 0 50px rgba(255, 87, 51, 1);
+  }
+}
+
+/* Apply the animated glow to an element */
+.animate-glow {
+  background: linear-gradient(to right, #f97316, #ef4444); /* Orange to red gradient */
+  box-shadow: 0 0 10px rgba(255, 191, 0, 0.7);
+  animation: glow 1.5s ease-in-out infinite;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Hover effect */
+.animate-glow:hover {
+  background: rgba(var(--primary), 0.9); /* Adjust the color or opacity on hover */
+}
+
+
+/* Static glowing border */
+.glow-border {
+  border: 2px solid rgba(249, 115, 22); /* Make the original border transparent */
+  border-radius: 20px; /* Rounded corners */
+
+  /* Glow effect */
+  box-shadow:
+    0 0 20px rgba(249, 115, 22, 0.2), /* Orange glow */
+    0 0 40px rgba(249, 115, 22, 0.2), /* Soft orange glow */
+    0 0 80px rgba(239, 68, 68, 0.6);  /* Red glow */
 }
