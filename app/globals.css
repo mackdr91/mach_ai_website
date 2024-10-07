@@ -8,10 +8,20 @@
   --font-simply-rounded: "Simply Rounded", sans-serif;
   --font-proline: "Proline", sans-serif;
 }
+* {
+  scroll-behavior: smooth
+}
+
+
+
+/* Optional: Ensure body content is above the stars */
 
 body {
   font-family: var(--font-proline); /* Default font */
+
+
 }
+
 
 .font-geist-sans {
   font-family: var(--font-geist-sans);
@@ -28,6 +38,7 @@ body {
 p {
   font-family: var(--font-geist-sans);
 }
+
 
 
 li {

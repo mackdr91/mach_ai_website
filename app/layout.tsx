@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import styles from '@/app/Background.module.css';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,10 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${proline.variable} ${geistMono.variable} ${geistSans.variable} ${simplyRounded.variable} bg-black text-white`}
+        className={`${proline.variable} ${geistMono.variable} ${geistSans.variable} ${simplyRounded.variable}  bg-black text-white`}
       >
         {children}
-        
       </body>
     </html>
   );

@@ -1,0 +1,11 @@
+/* BackgroundComponent.module.css */
+.backgroundComponent {
+  background-image: url('/images/MachXlogo.png');
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem; /* Equivalent to p-10 in Tailwind */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
+  color: white;
+  opacity: 0.8;
+}
